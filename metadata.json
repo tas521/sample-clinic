@@ -1,0 +1,6 @@
+{
+  "name": "Doctor Clinic Website",
+  "description": "A modern, elegant, and responsive multi-page doctor clinic website featuring Home, About Us, Services, Gallery, and Contact sections.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

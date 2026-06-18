@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - CarePoint Medical Clinic</title>
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-slate-50/50 font-sans text-slate-800 antialiased selection:bg-sky-600 selection:text-white">
+
+    <!-- Sticky Navigation Bar -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent bg-transparent py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          
+          <!-- Clinic Brand Logo -->
+          <a href="index.html" class="flex items-center gap-2.5 group">
+            <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-sky-600 text-white shadow-md shadow-sky-200 group-hover:scale-105 transition-transform duration-300">
+              <svg class="w-5.5 h-5.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-lg tracking-tight text-slate-900 leading-none block">CAREPOINT</span>
+              <span class="text-xxs font-mono tracking-widest text-emerald-600 font-bold uppercase block -mt-0.5">Medical Clinic</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="index.html" class="nav-link relative py-2 text-sm font-medium tracking-wide text-slate-600 hover:text-sky-600 transition-colors">
+              Home
+              <span class="nav-underline absolute bottom-0 left-0 right-0 h-0.5 bg-sky-600 rounded-full scale-x-0 transition-transform duration-300 origin-left"></span>
+            </a>
+            <a href="about.html" class="nav-link relative py-2 text-sm font-medium tracking-wide text-sky-600 transition-colors">
+              About Us
+              <span class="nav-underline absolute bottom-0 left-0 right-0 h-0.5 bg-sky-600 rounded-full scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
+            <a href="services.html" class="nav-link relative py-2 text-sm font-medium tracking-wide text-slate-600 hover:text-sky-600 transition-colors">
+              Services
+              <span class="nav-underline absolute bottom-0 left-0 right-0 h-0.5 bg-sky-600 rounded-full scale-x-0 transition-transform duration-300 origin-left"></span>
+            </a>
+            <a href="gallery.html" class="nav-link relative py-2 text-sm font-medium tracking-wide text-slate-600 hover:text-sky-600 transition-colors">
+              Gallery
+              <span class="nav-underline absolute bottom-0 left-0 right-0 h-0.5 bg-sky-600 rounded-full scale-x-0 transition-transform duration-300 origin-left"></span>
+            </a>
+            <a href="contact.html" class="nav-link relative py-2 text-sm font-medium tracking-wide text-slate-600 hover:text-sky-600 transition-colors">
+              Contact Us
+              <span class="nav-underline absolute bottom-0 left-0 right-0 h-0.5 bg-sky-600 rounded-full scale-x-0 transition-transform duration-300 origin-left"></span>
+            </a>
+          </nav>
+
+          <!-- Header CTA Button -->
+          <div class="hidden md:flex items-center gap-4">
+            <a href="index.html#book-appointment" class="glow-pulse py-2.5 px-5.5 text-xs font-bold bg-sky-600 hover:bg-sky-700 text-white rounded-full shadow-md shadow-sky-200 transition-all cursor-pointer">
+              Book Appointment
+            </a>
+          </div>
+
+          <!-- Mobile Menu Hamburger Toggler -->
+          <button id="mobile-menu-btn" class="p-2 md:hidden text-slate-700 hover:text-sky-600 rounded-xl transition-colors focus:outline-none" aria-expanded="false" aria-label="Toggle navigation menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path class="line-1 transition-transform duration-300 origin-center" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16"></path>
+              <path class="line-2 transition-opacity duration-300" stroke-linecap="round" stroke-linejoin="round" d="M4 12h16"></path>
+              <path class="line-3 transition-transform duration-300 origin-center" stroke-linecap="round" stroke-linejoin="round" d="M4 18h16"></path>
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-40 hidden bg-slate-900/40 backdrop-blur-xs transition-opacity duration-300 opacity-0"></div>
+
+    <!-- Mobile Navigation Drawer Panel -->
+    <div id="mobile-menu" class="fixed top-0 right-0 bottom-0 z-45 w-76 max-w-sm bg-white shadow-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <span class="font-display font-extrabold text-slate-900 tracking-tight text-lg">CAREPOINT Menu</span>
+        </div>
+
+        <nav class="flex flex-col gap-4 mt-8">
+          <a href="index.html" class="flex items-center gap-3 py-2.5 px-3.5 text-sm font-medium rounded-xl text-slate-700 hover:bg-slate-50 transition-colors">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            Home
+          </a>
+          <a href="about.html" class="flex items-center gap-3 py-2.5 px-3.5 text-sm font-semibold rounded-xl bg-sky-50 text-sky-600">
+            <svg class="w-5 h-5 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+            About Us
+          </a>
+          <a href="services.html" class="flex items-center gap-3 py-2.5 px-3.5 text-sm font-medium rounded-xl text-slate-700 hover:bg-slate-50 transition-colors">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+            Services
+          </a>
+          <a href="gallery.html" class="flex items-center gap-3 py-2.5 px-3.5 text-sm font-medium rounded-xl text-slate-700 hover:bg-slate-50 transition-colors">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            Gallery
+          </a>
+          <a href="contact.html" class="flex items-center gap-3 py-2.5 px-3.5 text-sm font-medium rounded-xl text-slate-700 hover:bg-slate-50 transition-colors">
+            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            Contact Us
+          </a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
+        <span class="text-xs text-slate-400 font-mono text-center">Emergency Dispatch: 1-800-555-0199</span>
+        <a href="index.html#book-appointment" class="w-full text-center py-2.5 px-4 bg-sky-600 hover:bg-sky-700 text-white rounded-full text-sm font-semibold tracking-wide shadow-md shadow-sky-100">
+          Book Online Now
+        </a>
+      </div>
+    </div>
+
+
+    <!-- ABOUT HERO INTRO -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-tr from-slate-900 to-slate-850 text-white relative overflow-hidden">
+      <!-- Decorative radial pattern -->
+      <div class="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] opacity-5 pointer-events-none [background-size:16px_16px]"></div>
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center reveal">
+        <span class="text-xs font-mono tracking-widest text-emerald-400 font-bold uppercase">Compassion meets Science</span>
+        <h1 class="font-display font-black text-4xl sm:text-5xl tracking-tight mt-2 mb-4">Dedicated to Clinical Integrity</h1>
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          At CarePoint, our multi-specialty teams are united by a single purpose: to provide standard medical excellence centered around child/adult safety.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- BRAND VALUES & STATS split section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Column Left: Copywriting values -->
+          <div class="lg:col-span-7 text-left flex flex-col items-start reveal">
+            <span class="text-xs font-mono tracking-widest text-sky-600 font-bold uppercase mb-2">Pristine Protocol Standards</span>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4.5xl leading-tight text-slate-900 tracking-tight mb-6">
+              Our Vision, Our Deep Commitment
+            </h2>
+            <p class="text-slate-600 leading-relaxed mb-6">
+              We understand that choosing a doctor is an act of absolute trust. That is why CarePoint integrates certified clinical procedures with warm hospitality, creating an environment focused on patient safety, low anxiety, and clear diagnosis.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full mb-8">
+              <div class="p-5 border border-slate-100 rounded-2xl bg-slate-50/50 flex gap-3">
+                <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Evidence-Based Treatment</h4>
+                  <p class="text-xxs text-slate-500 mt-1 leading-normal">Clinical protocols verified against verified world oncology and cardiology associations.</p>
+                </div>
+              </div>
+
+              <div class="p-5 border border-slate-100 rounded-2xl bg-slate-50/50 flex gap-3">
+                <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Pragmatic Transparency</h4>
+                  <p class="text-xxs text-slate-500 mt-1 leading-normal">Complete laboratory transparency and simplified diagnostic reports delivered in PDF/handout format.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blockquote block -->
+            <div class="border-l-4 border-sky-600 pl-6 my-2">
+              <p class="text-slate-600 italic text-sm leading-relaxed mb-1">
+                "Our medicine is responsive, clear, and proactive. We build families because we cherish the trust our neighborhood grants us."
+              </p>
+              <cite class="text-xxs font-mono tracking-wider font-bold uppercase text-slate-400">— Dr. Sarah Jenkins, Chief of Medicine</cite>
+            </div>
+          </div>
+
+          <!-- Column Right: Exterior Architectural Facade Graphic -->
+          <div class="lg:col-span-5 relative flex justify-center items-center reveal">
+            <div class="relative w-full max-w-md p-2 bg-slate-50 rounded-3xl border border-slate-100 shadow-xl">
+              <img src="/src/assets/images/clinic_exterior_1781772530797.jpg" alt="CarePoint Clinic Architecture exterior facade glass" class="w-full h-auto aspect-4/3 rounded-2xl object-cover" referrerPolicy="no-referrer" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- MISSION CARD BOXES -->
+    <section class="py-20 bg-slate-50/50 border-t border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-16 reveal">
+          <span class="text-xs font-mono tracking-widest text-emerald-600 font-bold uppercase">The CarePoint Standard</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3.5xl tracking-tight mt-1 mb-3">Our Three Foundation Pillars</h2>
+          <p class="text-slate-500 text-xs text-balance">The structural operating values that define our medical network every single morning.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1 -->
+          <div class="bg-white border border-slate-100 p-8 rounded-2.5xl text-left flex flex-col items-start reveal">
+            <div class="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6 font-display font-black text-base border border-sky-100">01</div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Scientific Precision</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              We leverage modern laboratory instruments, imaging tools, and chemical pathologists to identify issues accurately before planning custom treatment tracks. No guesswork.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bg-white border border-slate-100 p-8 rounded-2.5xl text-left flex flex-col items-start reveal">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 font-display font-black text-base border border-emerald-100">02</div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Radical Compassion</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              Clinicians must be active listeners first. We educate families, provide absolute safe spaces for child consults, and maintain soft warm lights so patient anxiety is kept optimal.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bg-white border border-slate-100 p-8 rounded-2.5xl text-left flex flex-col items-start reveal">
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-6 font-display font-black text-base border border-purple-100">03</div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Equal Accessibility</h3>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              Everyone deserves elite-level diagnostics. We offer convenient appointment booking, and instant emergency line responses anytime.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- EXECUTIVE MEDICAL TEAM SECTION -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-16 reveal">
+          <span class="text-xs font-mono tracking-widest text-sky-600 font-bold uppercase">Board-Certified Clinicians</span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4.5xl leading-tight text-slate-900 tracking-tight mt-1 mb-4">
+            Meet Our Senior Specialties
+          </h2>
+          <p class="text-slate-500 text-sm">
+            Our medical board consists of certified clinicians trained under top institutions, bringing academic intelligence and years of practical family experience.
+          </p>
+        </div>
+
+        <!-- Cohesive generated team image card header -->
+        <div class="w-full max-w-4xl mx-auto p-2 bg-slate-50 rounded-3xl border border-slate-100 shadow-lg mb-16 reveal">
+          <img src="/src/assets/images/clinic_doctors_1781772496364.jpg" alt="CarePoint Clinical Team board-certified doctors" class="w-full h-auto aspect-16/9 rounded-2xl object-cover" referrerPolicy="no-referrer" />
+          <div class="p-6 text-center">
+            <h4 class="font-display font-extrabold text-lg text-slate-900">CarePoint Specialized Clinical Panel</h4>
+            <p class="text-slate-500 text-xs mt-1">Representing family cardiology, pediatrics, skin diagnostics, biochemistry labs, and restorative aesthetic dentistry.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Doctor Card 1 -->
+          <div class="bg-slate-50/50 border border-slate-100 rounded-2.5xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center reveal">
+            <!-- Circular Initial Monogram representing clinician profile -->
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-sky-600 to-indigo-500 text-white flex items-center justify-center font-display font-extrabold text-2xl tracking-tighter shadow-md mb-6 relative">
+              SJ
+              <span class="absolute bottom-0 right-0 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center text-white" title="Specialist Board Approved">
+                <svg class="w-3 H-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              </span>
+            </div>
+            
+            <h3 class="font-display font-extrabold text-base text-slate-900">Dr. Sarah Jenkins, MD</h3>
+            <span class="text-xxs font-mono tracking-widest text-sky-600 font-bold uppercase mt-1">Chief of Cardiology</span>
+            
+            <!-- Credentials info -->
+            <p class="text-slate-500 text-xxs mt-3 leading-relaxed mb-6">
+              Formerly clinical specialist at Johns Hopkins Hospital. Over 15 years diagnosing cardiovascular diseases.
+            </p>
+
+            <span class="text-[10px] bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-bold font-mono mt-auto uppercase">Board-Certified (USA)</span>
+          </div>
+
+          <!-- Doctor Card 2 -->
+          <div class="bg-slate-50/50 border border-slate-100 rounded-2.5xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center reveal">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 text-white flex items-center justify-center font-display font-extrabold text-2xl tracking-tighter shadow-md mb-6 relative">
+              MV
+              <span class="absolute bottom-0 right-0 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center text-white">
+                <svg class="w-3 H-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              </span>
+            </div>
+            
+            <h3 class="font-display font-extrabold text-base text-slate-900">Dr. Marcus Vance, MD</h3>
+            <span class="text-xxs font-mono tracking-widest text-emerald-600 font-bold uppercase mt-1">Lead Pediatrician</span>
+            
+            <p class="text-slate-500 text-xxs mt-3 leading-relaxed mb-6">
+              Graduate of Harvard Medical School. Expert in children wellness milestones, early diagnoses, and child pathology.
+            </p>
+
+            <span class="text-[10px] bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-bold font-mono mt-auto uppercase">Board-Certified (USA)</span>
+          </div>
+
+          <!-- Doctor Card 3 -->
+          <div class="bg-slate-50/50 border border-slate-100 rounded-2.5xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center reveal">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-rose-500 to-purple-400 text-white flex items-center justify-center font-display font-extrabold text-2xl tracking-tighter shadow-md mb-6 relative">
+              ER
+              <span class="absolute bottom-0 right-0 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center text-white">
+                <svg class="w-3 H-3" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              </span>
+            </div>
+            
+            <h3 class="font-display font-extrabold text-base text-slate-900">Dr. Elena Rostova, MD</h3>
+            <span class="text-xxs font-mono tracking-widest text-sky-600 font-bold uppercase mt-1">Clinical Dermatologist</span>
+            
+            <p class="text-slate-500 text-xxs mt-3 leading-relaxed mb-6">
+              Specialized at Stanford Medicine. Expert in skin tissue analyses, allergens diagnostics, and cosmetic dermal consultations.
+            </p>
+
+            <span class="text-[10px] bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-bold font-mono mt-auto uppercase">Board-Certified (USA)</span>
+          </div>
+
+          <!-- Doctor Card 4 -->
+          <div class="bg-slate-50/50 border border-slate-100 rounded-2.5xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center reveal">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white flex items-center justify-center font-display font-extrabold text-2xl tracking-tighter shadow-md mb-6 relative">
+              JC
+              <span class="absolute bottom-0 right-0 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center text-white">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              </span>
+            </div>
+            
+            <h3 class="font-display font-extrabold text-base text-slate-900">Dr. James Choi, DDS</h3>
+            <span class="text-xxs font-mono tracking-widest text-purple-600 font-bold uppercase mt-1">Cosmetic Dentistry</span>
+            
+            <p class="text-slate-500 text-xxs mt-3 leading-relaxed mb-6">
+              Aesthetic Dentistry doctor at NYU Dental School. Focused on computer-guided oral cosmetics and surgical implants.
+            </p>
+
+            <span class="text-[10px] bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-bold font-mono mt-auto uppercase">ADA Member (USA)</span>
+          </div>
+
+        </div>
+
+        <div class="mt-12 text-center reveal">
+          <p class="text-xs text-slate-500 max-w-md mx-auto">
+            All our clinicians are fully registered under national healthcare systems and participate as continuous lecturers at leading university hospitals.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FOOTER WITH QUICK LINKS & CONTACT -->
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-slate-900">
+          
+          <!-- Column 1: Info -->
+          <div class="lg:col-span-4 flex flex-col items-start text-left">
+            <a href="index.html" class="flex items-center gap-2 mb-4">
+              <div class="flex items-center justify-center w-9 h-9 rounded-lg bg-sky-600 text-white shadow-md shadow-sky-500/10">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </div>
+              <span class="font-display font-black text-sm tracking-tight text-white uppercase sm:text-base">CAREPOINT CLINIC</span>
+            </a>
+            <p class="text-xs text-slate-400 leading-relaxed mb-6">
+              A pristine multi-specialty clinical hub. Caring for you and your family with state-of-the-art diagnostic science and high-end hospitality principles.
+            </p>
+            <div class="flex items-center gap-3">
+              <span class="text-xxs font-mono tracking-widest text-emerald-400 font-bold uppercase">Standard Licensing:</span>
+              <span class="text-xxs bg-white/5 border border-white/10 text-slate-300 py-0.5 px-2 rounded-md font-mono">MD-USA-779C-2026</span>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="md:col-span-1 lg:col-span-2 text-left">
+            <h4 class="font-display font-semibold text-white text-xs tracking-wider uppercase mb-4">Navigation</h4>
+            <ul class="flex flex-col gap-2.5 text-xs">
+              <li><a href="index.html" class="hover:text-sky-400 transition-colors">Home Landing</a></li>
+              <li><a href="about.html" class="hover:text-sky-400 transition-colors">About Our Team</a></li>
+              <li><a href="services.html" class="hover:text-sky-400 transition-colors">Specialty Services</a></li>
+              <li><a href="gallery.html" class="hover:text-sky-400 transition-colors">Clinic Gallery</a></li>
+              <li><a href="contact.html" class="hover:text-sky-400 transition-colors">Contact Location</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Specialties -->
+          <div class="md:col-span-1 lg:col-span-3 text-left">
+            <h4 class="font-display font-semibold text-white text-xs tracking-wider uppercase mb-4">Specialties</h4>
+            <ul class="flex flex-col gap-2.5 text-xs text-slate-400">
+              <li>Pediatrics & Family Care</li>
+              <li>Cardiovascular Screenings</li>
+              <li>Clinical Pathology & Diagnostics</li>
+              <li>Outpatient Skin Dermatologist</li>
+              <li>Orthopedic Joint Wellness</li>
+              <li>Aesthetic Restorative Dentistry</li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Clinical Hours & Emergency -->
+          <div class="lg:col-span-3 text-left">
+            <h4 class="font-display font-semibold text-white text-xs tracking-wider uppercase mb-4">Clinical Hours</h4>
+            <ul class="flex flex-col gap-2.5 text-xs text-slate-400">
+              <li class="flex justify-between border-b border-white/5 pb-1"><span class="text-slate-300">Mon - Sat:</span> <span>8:00 AM - 8:00 PM</span></li>
+              <li class="flex justify-between border-b border-white/5 pb-1"><span class="text-slate-300">Sunday:</span> <span class="text-emerald-400 font-semibold font-mono">Emergency Calls Only</span></li>
+              <li class="flex justify-between pt-1"><span class="text-slate-300">Appointment Inbox:</span> <span>outpatient@carepoint.clinic</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-xxs text-slate-500 font-mono">
+            &copy; 2026 CarePoint Multi-Specialty Clinic. All rights reserved. Registered under Medical Association license standard code MD-USA-779C-2026.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="p-2 bg-white/5 text-slate-400 hover:text-white rounded-lg transition-colors border border-white/5" aria-label="Privacy policy link">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.47 2 2 6.47 2 12a10 10 0 0010 10 10 10 0 0010-10C22 6.47 17.53 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Shared Module Script -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
