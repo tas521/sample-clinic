@@ -5,11 +5,9 @@ on:
     branches:
       - main
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Give the workflow write permission to commit/push to the gh-pages branch
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
@@ -17,10 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,14 +33,9 @@ jobs:
       - name: Build Application
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to GitHub Pages Branch
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: './dist'
+          folder: dist
+          branch: gh-pages
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
